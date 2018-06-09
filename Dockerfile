@@ -1,6 +1,8 @@
 FROM maven:3.5-jdk-8-alpine
+#ARG project
 WORKDIR /app
-COPY . /app 
+#COPY ./${project} /app 
+COPY ./ /app
 RUN mvn clean install
 
 
