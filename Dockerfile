@@ -1,6 +1,6 @@
 FROM maven:3.5-jdk-8-alpine
 WORKDIR /app
-COPY --from=0 /app/helloworld /app 
+COPY /app/helloworld /app 
 RUN mvn clean install
 
 
