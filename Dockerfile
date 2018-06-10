@@ -1,4 +1,3 @@
-//Original one
 FROM java:8
 VOLUME /tmp
 ADD target/SpringBootHelloWorld-0.0.1-SNAPSHOT.jar SpringBootHelloWorld.jar
