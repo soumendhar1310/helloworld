@@ -19,7 +19,7 @@ public class TestController {
 	}*/
 	public Map<String, Object> read() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		dataMap.put("message", "Hello World of Microservice with K8S and CI/CD and webhook test and deployment stage check and with Sonar Quality gate");
+		dataMap.put("message", "Hello World of Microservice with K8S and CI/CD and webhook test and deployment stage check and with Sonar Quality gate and Jenkinsfile");
 		//dataMap.put("status", "1");
 	    return dataMap;
 	}
