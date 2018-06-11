@@ -3,6 +3,8 @@ package com.javainuse.controllers;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,6 +15,8 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class TestController {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(TestController.class);
+	
 	@RequestMapping("/welcome")
 	/*public ModelAndView firstPage() {
 		return new ModelAndView("welcome");
@@ -21,6 +25,8 @@ public class TestController {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
 		dataMap.put("message", "Hello World of Microservice with K8S and CI/CD and webhook test and deployment stage check and with Sonar Quality gate and Jenkinsfile.");
 		//dataMap.put("status", "1");
+		LOGGER.info("New customer successfully registered");
+		
 	    return dataMap;
 	}
 
