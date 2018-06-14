@@ -23,7 +23,7 @@ public class TestController {
 	}*/
 	public Map<String, Object> read() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		dataMap.put("message", "Hello World of Microservice with K8S and CI/CD and webhook test and deployment stage check and with Sonar Quality gate and Jenkinsfile and ELK logback");
+		dataMap.put("message", "Hello World!!!");
 		//dataMap.put("status", "1");
 		LOGGER.info("ELK Logback successfully worked");
 		
