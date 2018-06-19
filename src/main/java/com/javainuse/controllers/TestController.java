@@ -25,7 +25,7 @@ public class TestController {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
 		dataMap.put("message", "Hello World for demo and checking for IoT demo");
 		//dataMap.put("status", "1");
-		LOGGER.info("ELK Logback successfully worked");
+		//LOGGER.info("ELK Logback successfully worked");
 		
 	    return dataMap;
 	}
