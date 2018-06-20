@@ -23,7 +23,7 @@ public class TestController {
 	}*/
 	public Map<String, Object> read() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		dataMap.put("message", "Hello World for demo and checking for IoT demo");
+		dataMap.put("message", "Hello World for demo and checking for IoT demo with Sonar on VM");
 		//dataMap.put("status", "1");
 		LOGGER.info("ELK Logback successfully worked");
 		
