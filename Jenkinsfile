@@ -16,6 +16,10 @@ podTemplate(label: 'mypod', containers: [
     git url: 'https://github.com/soumendhar1310/helloworld.git', credentialsId: '0a0a9295-4198-4061-a165-1450ef931895', branch: 'master'
     container('maven') {
         
+        
+        //Has to bring it on top as Sonar needs compiled code. Once we do Junit and run Maven, then Complete maven build can be pushed later.
+      	stage 'Build a Maven project'
+          	sh 'mvn clean install'
       
         stage('QA') {
     
@@ -33,8 +37,8 @@ podTemplate(label: 'mypod', containers: [
             }
         }
           
-        stage 'Build a Maven project'
-            sh 'mvn clean install'
+        //stage 'Build a Maven project'
+          //  sh 'mvn clean install'
     }
  
 
