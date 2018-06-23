@@ -18,8 +18,10 @@ podTemplate(label: 'mypod', containers: [
         
         
         //Has to bring it on top as Sonar needs compiled code. Once we do Junit and run Maven, then Complete maven build can be pushed later.
-      	stage 'Build a Maven project'
-          	sh 'mvn clean install'
+      	stage('Test') {
+            		sh 'mvn clean test -Dmaven.test.failure.ignore=true'
+            		junit '**/target/surefire-reports/TEST-*.xml'
+        }
       
         stage('QA') {
     
@@ -37,8 +39,8 @@ podTemplate(label: 'mypod', containers: [
             }
         }
           
-        //stage 'Build a Maven project'
-          //  sh 'mvn clean install'
+        stage 'Build a Maven project'
+            sh 'mvn clean install'
     }
  
 
