@@ -33,6 +33,7 @@ public class TestController {
 	    return dataMap;
 	}
 
+	/**trying out POST***/
 	@RequestMapping(value="/create", method = RequestMethod.POST)
 	public Map<String, Object> read(@RequestParam String name, @RequestParam String surnamename) {
 		RestTemplate restTemplate = new RestTemplate();
