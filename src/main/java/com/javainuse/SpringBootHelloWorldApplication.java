@@ -66,7 +66,7 @@ public class SpringBootHelloWorldApplication {
 	        .build();
 	    }
 	
-	
+	/*
 	@GetMapping("/create")
 	public Map<String, Object> create(@RequestParam String name, @RequestParam String surname) {
 		//RestTemplate restTemplate = new RestTemplate();
@@ -74,12 +74,7 @@ public class SpringBootHelloWorldApplication {
 	    ObjectMapper objectMapper=null;
 	    String recordID="";
 	    String userJSONText="";
-		//String fooResourceUrl
-		  //= "http://35.232.233.147:31461/User/create?name="+name+"&surname="+surname;
 		String fooResourceUrl
-		  //= env.getProperty("business.service.URL")+"/User/create?name="+name+"&surname="+surname;
-			//="http://"+System.getenv("SPRING_BOOT_BUSINESS_SERVICE_PORT_8080_TCP_ADDR")+":"
-			//	+System.getenv("SPRING_BOOT_BUSINESS_SERVICE_PORT_8080_TCP_PORT")+"/User/create?name="+name+"&surname="+surname;
 			="http://"+System.getenv(env.getProperty("business.service.URI"))+":"
 					+System.getenv(env.getProperty("business.service.PORT"))+"/User/create?name="+name+"&surname="+surname;
 		
@@ -122,7 +117,7 @@ public class SpringBootHelloWorldApplication {
 		//dataMap.put("message","User created successfully with Identifier "+recordID);
 		LOGGER.info(response.getBody());
 		
-		/*/**Call Adapter Microservice***/
+		//Call Adapter Microservice
 		
 		//userJSONText = "{\"name\":\""+name+"\", \"surname\":\""+surname+"\"}";
 		userJSONText =name+","+surname;
@@ -143,7 +138,7 @@ public class SpringBootHelloWorldApplication {
 		
 	    return dataMap;
 	}
-	
+	*/
 	/*@Bean
 	public AlwaysSampler defaultSampler() {
 	  return new AlwaysSampler();
