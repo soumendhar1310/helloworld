@@ -41,7 +41,7 @@ public class TestController {
 	}*/
 	public Map<String, Object> read() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		dataMap.put("message", "Hello World for demo!!!!");
+		dataMap.put("message", "Hello World for demo for testing pipeline");
 		//dataMap.put("status", "1");
 		LOGGER.info("ELK Logback successfully worked");
 		
