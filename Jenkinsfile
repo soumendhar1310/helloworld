@@ -26,7 +26,7 @@ podTemplate(label: 'mypod', containers: [
         stage('QA') {
     
             withSonarQubeEnv('sonar') {
-                sh 'mvn sonar:sonar -Dsonar.host.url=http://35.238.191.60:9000'
+                sh 'mvn sonar:sonar -Dsonar.host.url=http://104.198.218.51:9000'
             }
         }
      
